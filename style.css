@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, red, blue);
+    text-align: center;
+    /* padding-top: 30px; */
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+.conteiner {
+    perspective: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    border: 2px solid aqua;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: transform .4s linear;
+}
+
+.images {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.card .fonts,
+.card .back {
+    background-color: #fff;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    background-image: url(./backside.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card .fonts {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+ .show {
+    transform: rotateY(0deg);
+}
+score{
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+}
+
+.reser{
+    padding: 15px 20px;
+    background: none;
+    border: 2px solid aqua;
+    font-size: 16px;
+    color: aqua;
+    margin-top: 40px;
+    display: none;
+}
+
+.reser:active{
+    background: aqua;
+    color: black;
+}
